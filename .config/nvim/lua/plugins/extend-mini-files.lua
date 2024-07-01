@@ -24,7 +24,7 @@ return {
     windows = {
       width_nofocus = 20,
       width_focus = 50,
-      width_preview = 100,
+      width_preview = 80,
     },
     options = {
       use_as_default_explorer = true,
