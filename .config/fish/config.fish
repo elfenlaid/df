@@ -18,7 +18,14 @@ alias gcd='git checkout develop'
 alias gcm='git checkout main'
 alias gp='git pull'
 alias lg='lazygit'
-alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+
+if test -d ~/.cfg/
+    alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+end
+
+if test -d ~/.myconf/
+    alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
+end
 
 alias yard='yarn'
 alias vim='nvim'
