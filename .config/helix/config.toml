@@ -1,0 +1,63 @@
+theme = "onedark"
+
+[editor]
+auto-save = true
+auto-format = true
+cursorline = true
+completion-timeout = 5
+true-color = true
+
+[editor.file-picker]
+hidden = false
+
+[editor.lsp]
+auto-signature-help = false
+display-messages = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "⸽"
+skip-levels = 1
+
+[editor.whitespace.render]
+space = "all"
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control", "file-name"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+"C-s" = [":fmt", ":w"]
+"y" = [":clipboard-yank"]
+"p" = [":clipboard-paste-after"]
+"P" = [":clipboard-paste-before"]
+"X" = "select_line_above"
+"C-a" = "goto_line_start"
+"C-f" = "move_char_right"
+esc = ["collapse_selection", "keep_primary_selection"]
+ret = ["move_line_down", "goto_first_nonwhitespace"]
+
+[keys.normal."+"]
+m = ":run-shell-command mix test"
+
+[keys.insert]
+"C-A" = ["select_mode", "goto_line_start", "exit_select_mode"]
+"C-E" = ["select_mode", "goto_line_end", "exit_select_mode"]
+"C-e" = ["goto_line_end", "move_char_right"]
+"C-a" = "goto_line_start"
+"C-f" = "move_char_right"
+"C-b" = "move_char_left"
+
+
+[keys.select]
+"y" = [":clipboard-yank"]
+"p" = [":clipboard-paste-after"]
+"P" = [":clipboard-paste-before"]
+"X" = "select_line_above"
+"C-a" = "goto_line_start"
+"C-f" = "move_char_right"
+esc = ["collapse_selection", "keep_primary_selection", "normal_mode"]
