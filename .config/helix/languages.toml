@@ -1,3 +1,18 @@
-[[languages]]
+[language-server.typos]
+command = "/opt/homebrew/bin/typos-lsp"
+config.diagnosticSeverity = "Warning"
+environment = {"ELIXIR_LOG" = "info"} 
+
+[language-server.lexical]
+command = "/Users/elfenlaid/Code/lexical/_build/dev/package/lexical/bin/start_lexical.sh"
+
+[[language]]
 name = "elixir"
 auto-format = true
+scope = "source.elixir"
+language-servers = ["elixir-ls", "typos"]
+
+[[language]]
+name = "heex"
+auto-format = true
+language-servers = ["elixir-ls", "typos"]
