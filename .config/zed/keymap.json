@@ -1,0 +1,77 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-o": "editor::SelectLargerSyntaxNode",
+      "alt-i": "editor::SelectSmallerSyntaxNode",
+      "cmd-r f": "editor::FindAllReferences",
+      "cmd-r d": "editor::GoToDefinition",
+      "cmd-r shift-d": "editor::GoToDefinitionSplit",
+      "cmd-shift-r": "outline::Toggle",
+      "cmd-o": "file_finder::Toggle",
+      "cmd-shift-o": "file_finder::Toggle",
+      "ctrl-i": "pane::GoBack",
+      "ctrl-o": "pane::GoForward"
+    }
+  },
+  {
+    "context": "Dock || Terminal || Editor",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "VimControl && !menu && vim_mode != operator",
+    "bindings": {
+      "w": "vim::NextSubwordStart",
+      "b": "vim::PreviousSubwordStart",
+      "e": "vim::NextSubwordEnd",
+      "g e": "vim::PreviousSubwordEnd"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "bindings": {
+      "shift-s": [
+        "vim::PushOperator",
+        {
+          "AddSurrounds": {}
+        }
+      ]
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "g d": "editor::GoToDefinition",
+      "g v": "editor::GoToDefinitionSplit",
+      "space s": "outline::Toggle",
+      "space c f": "editor::Format",
+      "space f": "file_finder::Toggle",
+      "space o": "tab_switcher::Toggle",
+      "space e": "workspace::ToggleLeftDock",
+      "space /": "workspace::NewSearch",
+      "n": "search::SelectNextMatch",
+      "shift-n": "search::SelectPrevMatch",
+      "space t": "workspace::NewCenterTerminal",
+      "cmd+/": "editor::ToggleComments",
+      "+ +": "workspace::Save"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
+    "bindings": {
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::NewTerminal"
+    }
+  }
+]

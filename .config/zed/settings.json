@@ -1,0 +1,71 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "features": {
+    "inline_completion_provider": "none",
+    "copilot": false
+  },
+  "gutter": {
+    "folds": false,
+    "code_actions": false
+  },
+  "show_copilot_suggestions": false,
+  "buffer_font_size": 15,
+  "terminal": {
+    "shell": {
+      "program": "/opt/homebrew/bin/fish"
+    }
+  },
+  "vim_mode": true,
+  "vim": {
+    "use_system_clipboard": "on_yank",
+    // Lets `f` and `t` motions extend across multiple lines
+    "use_multiline_find": true
+  },
+  "autosave": "on_focus_change",
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "ui_font_family": "JetBrains Mono",
+  "buffer_font_family": "JetBrains Mono",
+  "languages": {
+    "Elixir": {
+      "tab_size": 2,
+      "language_servers": ["!lexical", "elixir-ls", "!next-ls"]
+      // "format_on_save": {
+      //   "external": {
+      //     "command": "mix",
+      //     "arguments": ["format", "--stdin-filename", "{buffer_path}", "-"]
+      //   }
+      // }
+    },
+    "HEEX": {
+      "language_servers": ["!lexical", "elixir-ls", "!next-ls"]
+    }
+  },
+  "lsp": {
+    "next-ls": {
+      "initialization_options": {
+        "extensions": {
+          "credo": { "enable": false }
+        }
+      }
+    }
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "One Dark"
+  }
+}
