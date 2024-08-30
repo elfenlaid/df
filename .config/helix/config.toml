@@ -62,6 +62,9 @@ c = ["trim_selections", "change_selection"]
 "S-ret" = ["open_above", "normal_mode"]
 "g" = { "v" = ["vsplit", "jump_view_up", "goto_definition"] }
 
+[keys.normal."space"]
+"S-f" = "file_picker_in_current_buffer_directory"
+
 [keys.insert]
 "C-A" = ["select_mode", "goto_line_start", "exit_select_mode"]
 "C-E" = ["select_mode", "goto_line_end", "exit_select_mode"]
