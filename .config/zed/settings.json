@@ -9,8 +9,8 @@
 {
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
     },
     "version": "2"
   },
@@ -29,7 +29,7 @@
       "program": "/opt/homebrew/bin/fish"
     }
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "vim": {
     "use_system_clipboard": "on_yank",
     // Lets `f` and `t` motions extend across multiple lines
@@ -46,7 +46,8 @@
   "languages": {
     "Elixir": {
       "tab_size": 2,
-      "language_servers": ["!lexical", "elixir-ls", "!next-ls"]
+      "language_servers": ["!lexical", "elixir-ls", "!next-ls"],
+      "format_on_save": "false"
       // "format_on_save": {
       //   "external": {
       //     "command": "mix",
