@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "show_inline_completions": false,
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
@@ -27,6 +28,9 @@
   "terminal": {
     "shell": {
       "program": "/opt/homebrew/bin/fish"
+    },
+    "env": {
+      "EDITOR": "zed --wait"
     }
   },
   "vim_mode": false,
@@ -75,5 +79,9 @@
     "mode": "dark",
     "light": "One Light",
     "dark": "One Dark"
+  },
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
   }
 }
