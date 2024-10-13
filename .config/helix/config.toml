@@ -61,8 +61,7 @@ c = ["trim_selections", "change_selection"]
 "ret" = ["open_below", "normal_mode"]
 "S-ret" = ["open_above", "normal_mode"]
 "S-d" = ["ensure_selections_forward", "extend_to_line_end"]
-"C-r" = ":reload-all"
-"C-," = ":config-open"
+"A-r" = ":reload-all"
 
 [keys.normal."g"]
 "v" = ["vsplit", "jump_view_up", "goto_definition"]

@@ -38,6 +38,11 @@ end
 config.keys = {
   -- ... add these new entries to your config.keys table
   {
+    key = 'l',
+    mods = 'ALT',
+    action = wezterm.action.DisableDefaultAssignment,
+  },
+  {
     key = ',',
     mods = 'SUPER',
     action = wezterm.action.SpawnCommandInNewTab {

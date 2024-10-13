@@ -4,14 +4,24 @@
     "bindings": {
       "alt-o": "editor::SelectLargerSyntaxNode",
       "alt-i": "editor::SelectSmallerSyntaxNode",
+      "ctrl-w": "editor::SelectLargerSyntaxNode",
+      "ctrl-shift-w": "editor::SelectSmallerSyntaxNode",
       "cmd-r f": "editor::FindAllReferences",
-      "cmd-r d": "editor::GoToDefinition",
-      "cmd-r shift-d": "editor::GoToDefinitionSplit",
+      "cmd-g": "editor::GoToDefinition",
+      "cmd-shift-g": "editor::GoToDefinitionSplit",
       "cmd-shift-r": "outline::Toggle",
       "cmd-o": "file_finder::Toggle",
       "cmd-shift-o": "file_finder::Toggle",
       "ctrl-i": "pane::GoBack",
-      "ctrl-o": "pane::GoForward"
+      "ctrl-o": "pane::GoForward",
+      "cmd-[": "pane::GoBack",
+      "cmd-]": "pane::GoForward",
+      "ctrl-[": "pane::GoBack",
+      "ctrl-]": "pane::GoForward",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "alt-shift-j": "editor::DuplicateLineDown",
+      "alt-shift-k": "editor::DuplicateLineUp"
     }
   },
   {
@@ -41,6 +51,19 @@
           "AddSurrounds": {}
         }
       ]
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-d": "editor::Delete",
+      "ctrl-h": "editor::Backspace",
+      "ctrl-p": "editor::MoveLineUp",
+      "ctrl-n": "editor::MoveLineDown",
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
+      "alt-shift-j": "editor::DuplicateLineDown",
+      "alt-shift-k": "editor::DuplicateLineUp"
     }
   },
   {
